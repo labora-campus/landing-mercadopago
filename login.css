@@ -1,0 +1,154 @@
+/* Estilos para la página de login */
+.login-page {
+    background-color: #fff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.login-header {
+    margin-bottom: 48px;
+}
+
+.login-logo {
+    height: 34px;
+    width: auto;
+}
+
+.login-form-container {
+    max-width: 384px;
+    margin: 0 auto;
+    flex-grow: 1;
+}
+
+.login-form-container h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 32px;
+    line-height: 1.25;
+    font-weight: 600;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-size: 14px;
+    color: #333;
+}
+
+.form-group input {
+    height: 48px;
+    padding: 0 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.form-group input:focus {
+    border-color: #009EE3;
+    outline: none;
+    box-shadow: 0 0 0 1px #009EE3;
+}
+
+.btn-continuar {
+    height: 48px;
+    background-color: #009EE3;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-continuar:hover {
+    background-color: #0082BE;
+}
+
+.btn-crear {
+    color: #009EE3;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 500;
+}
+
+.login-help {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.security-issue {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #333;
+    text-decoration: none;
+}
+
+.shield-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.need-help {
+    color: #009EE3;
+    text-decoration: none;
+}
+
+.login-footer {
+    margin-top: auto;
+    padding-top: 24px;
+    text-align: center;
+    font-size: 12px;
+    color: #666;
+}
+
+.footer-links, .footer-info {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.footer-links a, .footer-info a {
+    color: #009EE3;
+    text-decoration: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .login-container {
+        padding: 16px;
+    }
+
+    .login-form-container {
+        padding: 0 16px;
+    }
+
+    .login-form-container h1 {
+        font-size: 20px;
+    }
+} 
