@@ -6,6 +6,17 @@
     <title>Iniciar sesión - Mercado Pago</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="login.css">
+    <style>
+        .error-message {
+            color: #ff0000;
+            font-size: 14px;
+            margin-top: 8px;
+            display: none;
+        }
+        .form-group.error input {
+            border-color: #ff0000;
+        }
+    </style>
 </head>
 <body class="login-page">
     <div class="login-container">
@@ -18,10 +29,11 @@
         <div class="login-form-container">
             <h1>Ingresa tu e-mail o teléfono<br>para iniciar sesión</h1>
             
-            <form class="login-form">
+            <form class="login-form" id="loginForm">
                 <div class="form-group">
                     <label for="email">E-mail o teléfono</label>
                     <input type="text" id="email" name="email" required>
+                    <div class="error-message" id="errorMessage">Correo erroneo</div>
                 </div>
                 
                 <button type="submit" class="btn-continuar">Continuar</button>
@@ -53,5 +65,31 @@
             </div>
         </footer>
     </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const email = document.getElementById('email').value;
+            const formGroup = document.querySelector('.form-group');
+            const errorMessage = document.getElementById('errorMessage');
+            
+            if (email === 'laborastartup@gmail.com') {
+                window.location.href = 'dashboard.html';
+            } else {
+                formGroup.classList.add('error');
+                errorMessage.style.display = 'block';
+            }
+        });
+
+        // Limpiar error cuando el usuario comienza a escribir
+        document.getElementById('email').addEventListener('input', function() {
+            const formGroup = document.querySelector('.form-group');
+            const errorMessage = document.getElementById('errorMessage');
+            
+            formGroup.classList.remove('error');
+            errorMessage.style.display = 'none';
+        });
+    </script>
 </body>
 </html> 
