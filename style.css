@@ -6,7 +6,7 @@
     --background-color: #fff;
     --spacing: 1rem;
     --navbar-height: 70px;
-    --hero-bg-color: #F4F4F4;
+    --hero-bg-color: #009EE3;
     --benefits-bg-color: #fff;
     --testimonials-bg-color: #f9f9f9;
     --footer-bg-color: #222;
@@ -78,7 +78,7 @@ body {
 
 /* Hero Section */
 .hero {
-    background-color: var(--yellow);
+    background-color: var(--hero-bg-color);
     padding: 4rem 10%;
     display: flex;
     align-items: center;
@@ -97,7 +97,7 @@ body {
     font-size: 3rem;
     line-height: 1.2;
     margin-bottom: 2rem;
-    color: var(--text-color);
+    color: white;
 }
 
 .hero-img {
